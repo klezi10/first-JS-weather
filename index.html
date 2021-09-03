@@ -25,124 +25,136 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container rounded shadow background" style="max-width: 700px">
-      <div class="card-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-6 w-100">
-              <form class="input-group" id="search-form">
-                <input
-                  type="search"
-                  class="form-control rounded shadow-sm"
-                  placeholder="Enter a city"
-                  autofocus="on"
-                  id="city-input"
-                />
-                <div class="col-3">
-                  <button
-                    type="submit"
-                    value="search"
-                    class="btn btn-outline-secondary shadow-sm"
-                    id="search-button"
-                  >
-                    Search
-                  </button>
-                </div>
-                <div class="col-3">
-                  <button
-                    type="submit"
-                    class="btn btn-outline-secondary shadow-sm w-50"
-                    id="geolocation-button"
-                  >
-                    <i class="fas fa-map-marked-alt map-pin"></i>
-                  </button>
-                </div>
-              </form>
-              <br />
-              <div class="row">
-                <h1 id="city"></h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <p id="current-date-time"></p>
-              <p id="description"></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <h2>
-                <span id="temperature"> </span>
-                <span class="units"
-                  ><a href="#" id="celsius-link"> °C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></span
-                >⛅
-              </h2>
-            </div>
-            <div class="col-6">
-              <p>
-                Humidity: <span id="humidity"></span>%
-                <br />
-                Wind: <span id="wind"></span> km/hr
-              </p>
-            </div>
-          </div>
-          <hr />
+    <div class="container">
+      <div class="container rounded shadow background" style="max-width: 700px">
+        <div class="card-body">
           <div class="container">
             <div class="row">
-              <div class="col-2">
-                <p>Thu</p>
-              </div>
-              <div class="col-2">
-                <p>Fri</p>
-              </div>
-              <div class="col-2">
-                <p>Sat</p>
-              </div>
-              <div class="col-2">
-                <p>Sun</p>
-              </div>
-              <div class="col-2">
-                <p>Mon</p>
+              <div class="col-6 w-100">
+                <form class="input-group" id="search-form">
+                  <input
+                    type="search"
+                    class="form-control rounded shadow-sm"
+                    placeholder="Enter a city"
+                    autofocus="on"
+                    id="city-input"
+                  />
+                  <div class="col-3">
+                    <button
+                      type="submit"
+                      value="search"
+                      class="btn btn-outline-secondary shadow-sm"
+                      id="search-button"
+                    >
+                      Search
+                    </button>
+                  </div>
+                  <div class="col-3">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-secondary shadow-sm w-50"
+                      id="geolocation-button"
+                    >
+                      <i class="fas fa-map-marked-alt map-pin"></i>
+                    </button>
+                  </div>
+                </form>
+                <br />
+                <div class="row">
+                  <h1 id="city"></h1>
+                </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-2">
-                <p>☁</p>
-              </div>
-              <div class="col-2">
-                <p>☁</p>
-              </div>
-              <div class="col-2">
-                <p>☁</p>
-              </div>
-              <div class="col-2">
-                <p>🌧</p>
-              </div>
-              <div class="col-2">
-                <p>☀</p>
+              <div class="col-6">
+                <p id="current-date-time"></p>
+                <p id="description"></p>
               </div>
             </div>
             <div class="row">
-              <div class="col-2">
-                <p>36°</p>
+              <div class="col-6">
+                <h2>
+                  <span id="temperature"> </span>
+                  <span class="units"
+                    ><a href="#" id="celsius-link"> °C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >⛅
+                </h2>
               </div>
-              <div class="col-2">
-                <p>35°</p>
+              <div class="col-6">
+                <p>
+                  Humidity: <span id="humidity"></span>%
+                  <br />
+                  Wind: <span id="wind"></span> km/hr
+                </p>
               </div>
-              <div class="col-2">
-                <p>32°</p>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="row">
+                <div class="col-2">
+                  <p>Thu</p>
+                </div>
+                <div class="col-2">
+                  <p>Fri</p>
+                </div>
+                <div class="col-2">
+                  <p>Sat</p>
+                </div>
+                <div class="col-2">
+                  <p>Sun</p>
+                </div>
+                <div class="col-2">
+                  <p>Mon</p>
+                </div>
               </div>
-              <div class="col-2">
-                <p>32°</p>
+              <div class="row">
+                <div class="col-2">
+                  <p>☁</p>
+                </div>
+                <div class="col-2">
+                  <p>☁</p>
+                </div>
+                <div class="col-2">
+                  <p>☁</p>
+                </div>
+                <div class="col-2">
+                  <p>🌧</p>
+                </div>
+                <div class="col-2">
+                  <p>☀</p>
+                </div>
               </div>
-              <div class="col-2">
-                <p>35°</p>
+              <div class="row">
+                <div class="col-2">
+                  <p>36°</p>
+                </div>
+                <div class="col-2">
+                  <p>35°</p>
+                </div>
+                <div class="col-2">
+                  <p>32°</p>
+                </div>
+                <div class="col-2">
+                  <p>32°</p>
+                </div>
+                <div class="col-2">
+                  <p>35°</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div id="signature">
+        <small>
+          <a
+            href="https://github.com/klezi10/kay-vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Klesta Luli
+        </small>
       </div>
     </div>
     <script src="src/script.js"></script>
