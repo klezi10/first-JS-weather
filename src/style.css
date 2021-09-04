@@ -18,11 +18,12 @@ h1 {
   color: #00adb5;
 }
 
-h2 {
+#temperature {
   font-size: 50px;
   font-weight: 900;
   color: #6d767e;
   opacity: 85%;
+  display: inline-block;
 }
 
 hr {
@@ -42,8 +43,8 @@ button:hover {
 .units {
   font-size: 20px;
   position: relative;
-  top: -20px;
-  left: -10px;
+  top: -23px;
+  left: -2px;
 }
 
 #current-date-time {
@@ -61,4 +62,35 @@ a {
   margin-top: 1rem;
   color: #6d767e;
   opacity: 85%;
+}
+
+.current-weather-icon {
+  margin: 0;
+  display: inline;
+  height: auto;
+  width: 50px;
+  font-size: 50px;
+  vertical-align: left;
+  line-height: 2;
+}
+
+.input-wrapper {
+  width: 50%;
+}
+
+.col-3 {
+  width: fit-content;
+  margin-left: 2px !important;
+}
+
+#geolocation-button {
+  width: 75px !important;
+}
+
+#search-form {
+  justify-content: flex-start;
+}
+
+.five-day-weather {
+  justify-content: space-between;
 }

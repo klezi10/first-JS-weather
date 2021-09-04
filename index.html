@@ -32,13 +32,15 @@
             <div class="row">
               <div class="col-6 w-100">
                 <form class="input-group" id="search-form">
-                  <input
-                    type="search"
-                    class="form-control rounded shadow-sm"
-                    placeholder="Enter a city"
-                    autofocus="on"
-                    id="city-input"
-                  />
+                  <div class="input-wrapper">
+                    <input
+                      type="search"
+                      class="form-control rounded shadow-sm"
+                      placeholder="Enter a city"
+                      autofocus="on"
+                      id="city-input"
+                    />
+                  </div>
                   <div class="col-3">
                     <button
                       type="submit"
@@ -73,13 +75,13 @@
             </div>
             <div class="row">
               <div class="col-6">
-                <h2>
+                <div class="current-weather">
                   <span id="temperature"> </span>
                   <span class="units"
-                    ><a href="#" id="celsius-link"> °C</a> |
+                    ><a href="#" id="celsius-link">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a></span
-                  >⛅
-                </h2>
+                  ><span class="current-weather-icon"> ⛅</span>
+                </div>
               </div>
               <div class="col-6">
                 <p>
@@ -91,7 +93,7 @@
             </div>
             <hr />
             <div class="container">
-              <div class="row">
+              <div class="row five-day-weather">
                 <div class="col-2">
                   <p>Thu</p>
                 </div>
@@ -108,7 +110,7 @@
                   <p>Mon</p>
                 </div>
               </div>
-              <div class="row">
+              <div class="row five-day-weather">
                 <div class="col-2">
                   <p>☁</p>
                 </div>
@@ -125,7 +127,7 @@
                   <p>☀</p>
                 </div>
               </div>
-              <div class="row">
+              <div class="row five-day-weather">
                 <div class="col-2">
                   <p>36°</p>
                 </div>
