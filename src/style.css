@@ -31,7 +31,8 @@ hr {
   border-top: 1.5px solid #00adb5;
 }
 
-p {
+p,
+#signature {
   color: #6d767e;
   opacity: 85%;
 }
@@ -60,8 +61,6 @@ a {
 #signature {
   text-align: center;
   margin-top: 1rem;
-  color: #6d767e;
-  opacity: 85%;
 }
 
 .current-weather-icon {
@@ -93,4 +92,8 @@ a {
 
 .five-day-weather {
   justify-content: space-between;
+}
+
+.humidity-wind {
+  margin-top: 20px;
 }
