@@ -69,8 +69,10 @@
             </div>
             <div class="row">
               <div class="col-6">
-                <p id="current-date-time"></p>
-                <p id="description"></p>
+                <ul>
+                  <li>Last update: <span id="current-date-time"></span></li>
+                  <li><span id="description"></span></li>
+                </ul>
               </div>
             </div>
             <div class="row">
@@ -84,11 +86,14 @@
                 </div>
               </div>
               <div class="col-6 humidity-wind">
-                <p>
-                  Humidity: <span id="humidity"></span>%
-                  <br />
-                  Wind: <span id="wind"></span> km/hr
-                </p>
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>
+                    Wind:
+                    <span id="wind"></span>
+                    km/hr
+                  </li>
+                </ul>
               </div>
             </div>
             <hr />

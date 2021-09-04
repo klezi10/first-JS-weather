@@ -51,10 +51,6 @@ button:hover {
   left: -2px;
 }
 
-#current-date-time {
-  margin-bottom: 0;
-}
-
 a {
   text-decoration: none;
   font-weight: 400;
@@ -70,11 +66,10 @@ a {
 
 .current-weather-icon {
   margin: 0;
-  display: inline;
+  display: inline-block;
   height: auto;
   width: 50px;
   font-size: 50px;
-  vertical-align: left;
   line-height: 2;
 }
 
@@ -101,4 +96,11 @@ a {
 
 .humidity-wind {
   margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #6d767e;
+  opacity: 85%;
 }
