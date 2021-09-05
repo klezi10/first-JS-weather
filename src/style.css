@@ -79,7 +79,22 @@ a {
 
 .weather-forecast {
   justify-content: space-between;
-  align-items: left;
+
+  color: #6d767e;
+  opacity: 85%;
+}
+
+.weather-forecast img {
+  width: 50px;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.max-temp {
+  font-weight: bold;
 }
 
 .humidity-wind {
