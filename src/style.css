@@ -77,8 +77,9 @@ a {
   justify-content: flex-start;
 }
 
-.five-day-weather {
+.weather-forecast {
   justify-content: space-between;
+  align-items: left;
 }
 
 .humidity-wind {
