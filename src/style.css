@@ -95,3 +95,8 @@ ul {
 li::first-letter {
   text-transform: capitalize;
 }
+
+.current-weather img {
+  margin-bottom: -30px;
+  vertical-align: baseline;
+}
