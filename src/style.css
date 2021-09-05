@@ -100,3 +100,8 @@ li::first-letter {
   margin-bottom: -30px;
   vertical-align: baseline;
 }
+
+.current-weather .active {
+  color: #6d767e;
+  cursor: default;
+}

@@ -35,10 +35,12 @@ currentDayTime.innerHTML = formatDate(currentTime);
 // -----------------------weather code
 
 function displayWeather(response) {
+  console.log(response);
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector('#city').innerHTML = response.data.name;
-  document.querySelector('#temperature').innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector('#temperature').innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector('#humidity').innerHTML = response.data.main.humidity;
   document.querySelector('#wind').innerHTML = Math.round(
     response.data.wind.speed
@@ -69,26 +71,6 @@ function handleSubmit(event) {
 let searchForm = document.querySelector('#search-form');
 searchForm.addEventListener('submit', handleSubmit);
 
-searchCity('Bangkok'); //default city
-
-// function celsiusTempUpdate(event) {
-//   event.preventDefault();
-//   let currentTemperature = document.querySelector('#temperature');
-//   currentTemperature.innerHTML = '35';
-// }
-
-// let celsiusTemp = document.querySelector('#celsius-link');
-// celsiusTemp.addEventListener('click', celsiusTempUpdate);
-
-// function fahrenheitTempUpdate(event) {
-//   event.preventDefault();
-//   let currentTemperature = document.querySelector('#temperature');
-//   currentTemperature.innerHTML = '66';
-// }
-
-// let fahrenheitTemp = document.querySelector('#fahrenheit-link');
-// fahrenheitTemp.addEventListener('click', fahrenheitTempUpdate);
-
 // -------------------> geolocation code
 
 function searchPosition(position) {
@@ -108,3 +90,32 @@ function handleGeolocation(event) {
 
 let geolocationButton = document.querySelector('#geolocation-button');
 geolocationButton.addEventListener('click', handleGeolocation);
+
+//temperature conversions
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector('#temperature');
+  celsiusLink.classList.add('active');
+  fahrenheitLink.classList.remove('active');
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector('#temperature');
+  celsiusLink.classList.remove('active');
+  fahrenheitLink.classList.add('active');
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  currentTemperature.innerHTML = fahrenheitTemperature;
+}
+
+let fahrenheitLink = document.querySelector('#fahrenheit-link');
+fahrenheitLink.addEventListener('click', displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector('#celsius-link');
+celsiusLink.addEventListener('click', displayCelsiusTemp);
+
+let celsiusTemperature = null;
+
+searchCity('Bangkok'); //default city
