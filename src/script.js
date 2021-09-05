@@ -35,7 +35,6 @@ currentDayTime.innerHTML = formatDate(currentTime);
 // -----------------------weather code
 
 function displayWeather(response) {
-  console.log(response.data);
   document.querySelector('#city').innerHTML = response.data.name;
   document.querySelector('#temperature').innerHTML = Math.round(
     response.data.main.temp
@@ -46,6 +45,12 @@ function displayWeather(response) {
   );
   document.querySelector('#description').innerHTML =
     response.data.weather[0].description;
+  iconElement = document.querySelector('#icon');
+  iconElement.setAttribute(
+    'src',
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute('alt', response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -64,7 +69,7 @@ function handleSubmit(event) {
 let searchForm = document.querySelector('#search-form');
 searchForm.addEventListener('submit', handleSubmit);
 
-searchCity('Toronto'); //default city
+searchCity('Bangkok'); //default city
 
 // function celsiusTempUpdate(event) {
 //   event.preventDefault();
