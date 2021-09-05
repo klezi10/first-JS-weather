@@ -29,8 +29,9 @@ function formatDate(date) {
   return formattedDate;
 }
 
-let currentDayTime = document.querySelector('#current-date-time');
-currentDayTime.innerHTML = formatDate(currentTime);
+// ------------> different way to show the date
+// let currentDayTime = document.querySelector('#current-date-time');
+// currentDayTime.innerHTML = formatDate(currentTime);
 
 // -----------------------weather code
 
@@ -53,6 +54,9 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute('alt', response.data.weather[0].description);
+  document.querySelector('#current-date-time').innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function searchCity(city) {
@@ -91,7 +95,7 @@ function handleGeolocation(event) {
 let geolocationButton = document.querySelector('#geolocation-button');
 geolocationButton.addEventListener('click', handleGeolocation);
 
-//temperature conversions
+//--------------->temperature conversions
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
