@@ -123,3 +123,33 @@ celsiusLink.addEventListener('click', displayCelsiusTemp);
 let celsiusTemperature = null;
 
 searchCity('Bangkok'); //default city
+
+//--------------------adding forecast JS
+
+function displayForecast() {
+  let forecastElement = document.querySelector('#weather-forecast');
+
+  let forecastHTML = `<div class="row">`;
+  let days = ['Thu', 'Fri', 'Sat', 'Sun', 'Mon'];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                    <div class="weather-forecast-date">${day}</div>
+                    <img
+                      src="http://openweathermap.org/img/wn/10d@2x.png"
+                      alt=""
+                    />
+                    <div class="weather-forecast-temp">
+                      <span class="max-temp">36° </span
+                      ><span class="min-temp">20°</span>
+                    </div>
+                    </div>
+                    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
