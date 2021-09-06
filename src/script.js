@@ -30,8 +30,8 @@ function formatDate(date) {
 }
 
 // ------------> different way to show the date
-// let currentDayTime = document.querySelector('#current-date-time');
-// currentDayTime.innerHTML = formatDate(currentTime);
+let currentDayTime = document.querySelector('#current-date-time');
+currentDayTime.innerHTML = formatDate(currentTime);
 
 // -----------------------weather code
 
@@ -54,9 +54,9 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute('alt', response.data.weather[0].description);
-  document.querySelector('#current-date-time').innerHTML = formatDate(
-    response.data.dt * 1000
-  );
+  // document.querySelector('#current-date-time').innerHTML = formatDate(
+  //   response.data.dt * 1000
+  // );
 }
 
 function searchCity(city) {
@@ -84,7 +84,7 @@ function searchPosition(position) {
   let apiKey = `575c34ae9e568091893014cdffd7e002`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
-  https: axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function handleGeolocation(event) {
