@@ -35,6 +35,15 @@ currentDayTime.innerHTML = formatDate(currentTime);
 
 // -----------------------weather code
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+
+  let apiKey = `575c34ae9e568091893014cdffd7e002`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   console.log(response);
   celsiusTemperature = response.data.main.temp;
@@ -54,6 +63,9 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute('alt', response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+
   // document.querySelector('#current-date-time').innerHTML = formatDate(
   //   response.data.dt * 1000
   // );
@@ -126,7 +138,8 @@ searchCity('Bangkok'); //default city
 
 //--------------------adding forecast JS
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector('#weather-forecast');
 
   let forecastHTML = `<div class="row">`;
@@ -151,5 +164,3 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
