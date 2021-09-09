@@ -9,59 +9,37 @@ body {
   max-width: 700px;
 }
 
-.map-pin {
+h1,
+.map-pin,
+a,
+a:hover {
   color: #00adb5;
 }
 
-h1 {
+h1,
+#temperature {
   font-weight: 900;
-  color: #00adb5;
+}
+
+#temperature,
+#signature,
+.weather-forecast,
+ul {
+  color: #6d767e;
+  opacity: 85%;
 }
 
 #temperature {
   font-size: 50px;
-  font-weight: 900;
-  color: #6d767e;
-  opacity: 85%;
   display: inline-block;
 }
 
 hr {
-  color: #00adb5;
   border-top: 1.7px solid #00adb5;
 }
 
-p {
-  color: #6d767e;
-  opacity: 85%;
-}
-
 button:hover {
-  opacity: 85%;
-}
-
-.units {
-  font-size: 20px;
-  position: relative;
-  top: -23px;
-  left: -2px;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 400;
-  color: #00adb5;
-}
-
-#signature {
-  text-align: center;
-  margin-top: 1rem;
-  color: #6d767e;
-  opacity: 85%;
-}
-
-.input-wrapper {
-  width: 50%;
+  opacity: 65%;
 }
 
 .buttons {
@@ -77,11 +55,33 @@ a {
   justify-content: flex-start;
 }
 
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -23px;
+  left: -2px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#signature {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.input-wrapper {
+  width: 50%;
+}
+
 .weather-forecast {
   justify-content: space-between;
-
-  color: #6d767e;
-  opacity: 85%;
 }
 
 .weather-forecast img {
@@ -104,8 +104,6 @@ a {
 ul {
   list-style: none;
   padding: 0;
-  color: #6d767e;
-  opacity: 85%;
 }
 
 li::first-letter {
