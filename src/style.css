@@ -119,4 +119,5 @@ li::first-letter {
   color: #6d767e;
   cursor: default;
   font-weight: bold;
+  text-decoration: none;
 }
