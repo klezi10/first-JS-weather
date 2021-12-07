@@ -36,8 +36,6 @@ currentDayTime.innerHTML = formatDate(currentTime);
 // -----------------------weather code
 
 function getForecast(coordinates) {
-  console.log(coordinates);
-
   let apiKey = `575c34ae9e568091893014cdffd7e002`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
@@ -45,7 +43,6 @@ function getForecast(coordinates) {
 }
 
 function displayWeather(response) {
-  console.log(response);
   celsiusTemperature = response.data.main.temp;
 
   document.querySelector('#city').innerHTML = response.data.name;
